@@ -8,7 +8,7 @@ class Court extends Model{
 
 	protected $table = 'courts';
 
-	protected $fillable = ['name','lat','long'];
+	protected $fillable = ['name','lat','long','owner'];
 
 	public $timestamps = false;
 

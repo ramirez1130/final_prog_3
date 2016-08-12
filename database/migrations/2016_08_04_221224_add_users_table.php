@@ -21,8 +21,8 @@ class AddUsersTable extends Migration
             $table->double('average', 4, 2);
             $table->string('username',30);
             $table->string('password',60);
-            $table->integer('team_id')->unsigned();
-            $table->integer('gender_id')->unsigned();
+            $table->integer('team_id')->unsigned()->nullable();
+            $table->integer('gender_id')->unsigned()->nullable();
 
             $table->foreign('team_id')->references('id')->on('teams');
             $table->foreign('gender_id')->references('id')->on('genders');

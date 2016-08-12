@@ -39,6 +39,7 @@ $factory->define(Court::class, function(Generator $faker){
     return [
         'name'  =>  'Estadio ' . $faker->lastName,
         'lat'   =>  $faker->latitude,
-        'long'  =>  $faker->longitude
+        'long'  =>  $faker->longitude,
+        'owner' =>  1
     ];
 });

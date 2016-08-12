@@ -17,6 +17,10 @@ class AddCourtsTable extends Migration
             $table->string('name',45);
             $table->string('lat');
             $table->string('long');
+            $table->integer('owner')->unsigned()->nullable();
+            
+            $table->foreign('owner')->references('id')->on('users');
+            
             $table->timestamps();
         });
     }
