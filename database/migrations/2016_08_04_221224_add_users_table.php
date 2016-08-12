@@ -26,6 +26,9 @@ class AddUsersTable extends Migration
 
             $table->foreign('team_id')->references('id')->on('teams');
             $table->foreign('gender_id')->references('id')->on('genders');
+
+            $table->enum('type',['player','owner-court','admin'])->default('player');
+            $table->rememberToken();
             $table->timestamps();
         });
     }

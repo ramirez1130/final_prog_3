@@ -10,4 +10,6 @@ class Court extends Model{
 
 	protected $fillable = ['name','lat','long'];
 
+	public $timestamps = false;
+
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Court;
 use Faker\Generator;
 use App\User;
 use App\Models\Team;
@@ -31,5 +32,13 @@ $factory->define(User::class, function (Generator $faker) {
 $factory->define(Team::class, function (Generator $faker) {
     return [
         'name'		=> "Team " . $faker->state
+    ];
+});
+
+$factory->define(Court::class, function(Generator $faker){
+    return [
+        'name'  =>  'Estadio ' . $faker->lastName,
+        'lat'   =>  $faker->latitude,
+        'long'  =>  $faker->longitude
     ];
 });
