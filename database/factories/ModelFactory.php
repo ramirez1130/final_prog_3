@@ -47,7 +47,7 @@ $factory->define(Court::class, function(Generator $faker){
 
 $factory->define(Tournament::class , function (Generator $faker){
     return [
-        'name'              =>  'Torneo ' . $faker->creditCardType,
+        'name'              =>  'Torneo ' . $faker->colorName,
         'type_tournament_id'   => $faker->randomElement([1,2,3])
     ];
 });
