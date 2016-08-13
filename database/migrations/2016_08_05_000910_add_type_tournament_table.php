@@ -14,8 +14,7 @@ class AddTypeTournamentTable extends Migration
     {
         Schema::create('types_tournaments', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('type',45);
-            $table->tinyInteger('cant_teams');
+            $table->string('name',45);
             $table->timestamps();
         });
     }

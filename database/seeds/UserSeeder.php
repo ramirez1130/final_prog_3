@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
+use Illuminate\Support\Facades\DB;
 
 class UserSeeder extends Seeder
 {
@@ -18,7 +19,8 @@ class UserSeeder extends Seeder
             'dni'       => 43000100,
             'email'     => 'ramirez7358@gmail.com',
             'username'  => 'admin',
-            'password'  => Hash::make('admin')
+            'password'  => Hash::make('admin'),
+            'type'      => 'admin'
 
         ]);
         factory(User::class , 50)->create();

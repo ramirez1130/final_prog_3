@@ -522,5 +522,7 @@ return array(
     'TeamSeeder' => $baseDir . '/database/seeds/TeamSeeder.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
+    'TournamentSeeder' => $baseDir . '/database/seeds/TournamentSeeder.php',
+    'TypeTournamentSeeder' => $baseDir . '/database/seeds/TypeTournamentSeeder.php',
     'UserSeeder' => $baseDir . '/database/seeds/UserSeeder.php',
 );

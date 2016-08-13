@@ -780,6 +780,8 @@ class ComposerStaticInit3630f681d9fda09e4b0f2403685d652c
         'TeamSeeder' => __DIR__ . '/../..' . '/database/seeds/TeamSeeder.php',
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
+        'TournamentSeeder' => __DIR__ . '/../..' . '/database/seeds/TournamentSeeder.php',
+        'TypeTournamentSeeder' => __DIR__ . '/../..' . '/database/seeds/TypeTournamentSeeder.php',
         'UserSeeder' => __DIR__ . '/../..' . '/database/seeds/UserSeeder.php',
     );
 

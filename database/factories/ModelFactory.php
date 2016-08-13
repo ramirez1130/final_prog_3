@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Court;
+use App\Models\Tournament;
 use Faker\Generator;
 use App\User;
 use App\Models\Team;
@@ -41,5 +42,12 @@ $factory->define(Court::class, function(Generator $faker){
         'lat'   =>  $faker->latitude,
         'long'  =>  $faker->longitude,
         'owner' =>  1
+    ];
+});
+
+$factory->define(Tournament::class , function (Generator $faker){
+    return [
+        'name'              =>  'Torneo ' . $faker->creditCardType,
+        'type_tournament_id'   => $faker->randomElement([1,2,3])
     ];
 });

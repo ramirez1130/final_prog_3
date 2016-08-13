@@ -8,6 +8,8 @@ class TypeTournament extends Model{
 
 	protected $table = 'types_tournaments';
 
-	protected $fillable = ['type','cant_teams'];
+	protected $fillable = ['type'];
+
+	public $timestamps = false;
 
 }
