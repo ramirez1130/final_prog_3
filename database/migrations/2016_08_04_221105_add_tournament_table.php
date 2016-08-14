@@ -15,6 +15,7 @@ class AddTournamentTable extends Migration
         Schema::create('tournaments', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name',100);
+            $table->decimal('price',12,8);
             $table->integer('type_tournament_id')->unsigned();
 
             $table->foreign('type_tournament_id')->references('id')->on('types_tournaments');
