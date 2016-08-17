@@ -20,4 +20,7 @@ class User extends Model{
 		return $this->hasOne(Gender::class);
 	}
 
+	public function matches(){
+        return $this->belongsToMany(Match::class);
+    }
 }

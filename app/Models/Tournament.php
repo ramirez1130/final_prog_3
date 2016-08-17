@@ -10,4 +10,12 @@ class Tournament extends Model{
 
 	protected $fillable = ['name'];
 
+	public function matches(){
+		$this->hasMany(Match::class);
+	}
+
+	public function typeTournament(){
+		return $this->hasOne(TypeTournament::class);
+	}
+
 }
