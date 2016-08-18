@@ -270,6 +270,7 @@ class ComposerStaticInit3630f681d9fda09e4b0f2403685d652c
         'AddTeamsTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_04_221106_add_teams_table.php',
         'AddTournamentTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_04_221105_add_tournament_table.php',
         'AddTypeTournamentTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_04_221104_add_type_tournament_table.php',
+        'AddUserMatchTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_18_095538_add_user_match_table.php',
         'AddUsersTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_04_221224_add_users_table.php',
         'CourtSeeder' => __DIR__ . '/../..' . '/database/seeds/CourtSeeder.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',

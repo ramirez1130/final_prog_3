@@ -12,6 +12,7 @@ return array(
     'AddTeamsTable' => $baseDir . '/database/migrations/2016_08_04_221106_add_teams_table.php',
     'AddTournamentTable' => $baseDir . '/database/migrations/2016_08_04_221105_add_tournament_table.php',
     'AddTypeTournamentTable' => $baseDir . '/database/migrations/2016_08_04_221104_add_type_tournament_table.php',
+    'AddUserMatchTable' => $baseDir . '/database/migrations/2016_08_18_095538_add_user_match_table.php',
     'AddUsersTable' => $baseDir . '/database/migrations/2016_08_04_221224_add_users_table.php',
     'CourtSeeder' => $baseDir . '/database/seeds/CourtSeeder.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
