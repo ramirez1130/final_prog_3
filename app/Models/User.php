@@ -12,12 +12,12 @@ class User extends Model{
 		'name','lastname','dni','email','username','password','team_id','gender_id'
 	];
 
-	public function teams(){
-		return $this->hasOne(Team::class);
+	public function team(){
+		return $this->hasOne(Team::class,'id','team_id');
 	}
 
-	public function genders(){
-		return $this->hasOne(Gender::class);
+	public function gender(){
+		return $this->hasOne(Gender::class,'id','gender_id');
 	}
 
 	public function matches(){

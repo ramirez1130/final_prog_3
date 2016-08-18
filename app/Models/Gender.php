@@ -10,4 +10,8 @@ class Gender extends Model{
 
 	protected $fillable = ['gender'];
 
+	public function users(){
+        return $this->belongsTo(User::class);
+    }
+
 }

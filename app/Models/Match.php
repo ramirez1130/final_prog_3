@@ -8,14 +8,18 @@ class Match extends Model{
 
 	protected $table = 'matches';
 
-	protected $fillable = ['local','visitor','date','court_id'];
+	protected $fillable = ['local','visitor','date','court_id','tournament_id'];
 
-	public function courts(){
-		return $this->hasOne(Court::class);
+	public function court(){
+		return $this->hasOne(Court::class,'id');
 	}
 
-	public function team(){
-		return $this->belongsTo(Team::class);
+	public function team_local(){
+		return $this->belongsTo(Team::class,'local');
+	}
+
+	public function team_visitor(){
+		return $this->belongsTo(Team::class,'visitor');
 	}
 
 	public function tournament(){

@@ -16,4 +16,8 @@ class Team extends Model{
     	return $this->hasMany(Match::class);
     }
 
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
 }
