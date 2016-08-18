@@ -15,7 +15,6 @@ class AddTypeTournamentTable extends Migration
         Schema::create('types_tournaments', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name',45);
-            $table->timestamps();
         });
     }
 

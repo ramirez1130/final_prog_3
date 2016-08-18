@@ -10,6 +10,4 @@ class TypeTournament extends Model{
 
 	protected $fillable = ['type'];
 
-	public $timestamps = false;
-
 }
