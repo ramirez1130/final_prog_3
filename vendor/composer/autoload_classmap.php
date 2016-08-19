@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddCommissionTable' => $baseDir . '/database/migrations/2016_08_04_221103_add_commission_table.php',
     'AddCourtsTable' => $baseDir . '/database/migrations/2016_08_04_222742_add_courts_table.php',
     'AddGendersTable' => $baseDir . '/database/migrations/2016_08_04_221146_add_genders_table.php',
     'AddMatchesTable' => $baseDir . '/database/migrations/2016_08_05_000912_add_matches_table.php',
@@ -14,6 +15,7 @@ return array(
     'AddTypeTournamentTable' => $baseDir . '/database/migrations/2016_08_04_221104_add_type_tournament_table.php',
     'AddUserMatchTable' => $baseDir . '/database/migrations/2016_08_18_095538_add_user_match_table.php',
     'AddUsersTable' => $baseDir . '/database/migrations/2016_08_04_221224_add_users_table.php',
+    'CommissionSeeder' => $baseDir . '/database/seeds/CommissionSeeder.php',
     'CourtSeeder' => $baseDir . '/database/seeds/CourtSeeder.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',

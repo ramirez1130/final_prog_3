@@ -25,7 +25,7 @@ $factory->define(User::class, function (Generator $faker) {
         'email' 	=> $faker->email,
         'username'	=> $faker->username,
         'password' 	=> Hash::make('contraseña'),
-		'team_id'	=> $faker->randomElement([1,2,3,4,5,6,7,8,9,10]),
+		'team_id'	=> $faker->numberBetween(1,10),
 		'gender_id'	=> $faker->randomElement([1,2])
     ];
 });
@@ -47,8 +47,11 @@ $factory->define(Court::class, function(Generator $faker){
 
 $factory->define(Tournament::class , function (Generator $faker){
     return [
-        'name'              =>  'Torneo ' . $faker->colorName,
-        'price'             =>  $faker->randomFloat(null , 0, 2000),
-        'type_tournament_id'   => $faker->randomElement([1,2,3])
+        'name'                  =>  'Torneo ' . $faker->colorName,
+        'price'                 =>  $faker->numberBetween(500,3000),
+        'reward'                =>  $faker->randomFloat(4,10000,30000),
+        'type_tournament_id'    =>  $faker->randomElement([1,2,3]),
+        'quota'                 =>  $faker->numberBetween(8,32),
+        'commission'            =>  1
     ];
 });

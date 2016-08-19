@@ -264,6 +264,7 @@ class ComposerStaticInit3630f681d9fda09e4b0f2403685d652c
     );
 
     public static $classMap = array (
+        'AddCommissionTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_04_221103_add_commission_table.php',
         'AddCourtsTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_04_222742_add_courts_table.php',
         'AddGendersTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_04_221146_add_genders_table.php',
         'AddMatchesTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_05_000912_add_matches_table.php',
@@ -272,6 +273,7 @@ class ComposerStaticInit3630f681d9fda09e4b0f2403685d652c
         'AddTypeTournamentTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_04_221104_add_type_tournament_table.php',
         'AddUserMatchTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_18_095538_add_user_match_table.php',
         'AddUsersTable' => __DIR__ . '/../..' . '/database/migrations/2016_08_04_221224_add_users_table.php',
+        'CommissionSeeder' => __DIR__ . '/../..' . '/database/seeds/CommissionSeeder.php',
         'CourtSeeder' => __DIR__ . '/../..' . '/database/seeds/CourtSeeder.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',

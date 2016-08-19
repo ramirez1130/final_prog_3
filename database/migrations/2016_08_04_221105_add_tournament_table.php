@@ -15,10 +15,14 @@ class AddTournamentTable extends Migration
         Schema::create('tournaments', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name',100);
-            $table->decimal('price',12,8);
+            $table->smallInteger('price');
+            $table->decimal('reward',9,4);
+            $table->tinyInteger('quota');
             $table->integer('type_tournament_id')->unsigned();
+            $table->integer('commission')->unsigned();
 
             $table->foreign('type_tournament_id')->references('id')->on('types_tournaments');
+            $table->foreign('commission')->references('id')->on('commissions');
             $table->timestamps();
         });
     }

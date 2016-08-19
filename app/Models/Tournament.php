@@ -8,7 +8,7 @@ class Tournament extends Model{
 
 	protected $table = 'tournaments';
 
-	protected $fillable = ['name','price','type_tournament_id'];
+	protected $fillable = ['name','price','type_tournament_id','reward','quota'];
 
 	public function matches(){
 		$this->hasMany(Match::class);
