@@ -20,7 +20,8 @@ class UserSeeder extends Seeder
             'email'     => 'ramirez7358@gmail.com',
             'username'  => 'admin',
             'password'  => Hash::make('admin'),
-            'type'      => 'admin'
+            'type'      => 'admin',
+            'gender_id' =>  1
 
         ]);
         factory(User::class , 50)->create();

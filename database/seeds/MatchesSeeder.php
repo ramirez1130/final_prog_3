@@ -15,7 +15,7 @@ class MatchesSeeder extends Seeder
             'local'         =>  1,
             'visitor'       =>  2,
             'date'          =>  "2016-08-17",
-            'court_id'      =>  1,
+            'court_id'      =>  2,
             'tournament_id' =>  1
         ]);
     }

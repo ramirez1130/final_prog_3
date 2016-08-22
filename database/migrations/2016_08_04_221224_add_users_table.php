@@ -22,7 +22,7 @@ class AddUsersTable extends Migration
             $table->string('username',30);
             $table->string('password',60);
             $table->integer('team_id')->unsigned()->nullable();
-            $table->integer('gender_id')->unsigned()->nullable();
+            $table->integer('gender_id')->unsigned();
 
             $table->foreign('team_id')->references('id')->on('teams');
             $table->foreign('gender_id')->references('id')->on('genders');
