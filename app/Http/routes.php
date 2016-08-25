@@ -1,10 +1,9 @@
 <?php
 
-
 Route::group(['prefix'  =>  'users'], function(){
 
-    Route::get('view/{id?}',[
-        'uses'   =>  'UserController@index',
+    Route::get('/',[
+        'uses'  =>  'UserController@index',
         'as'    =>  'userList'
     ]);
 
