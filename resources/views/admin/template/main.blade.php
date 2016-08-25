@@ -9,7 +9,9 @@
     @include('admin.template.nav')
 
         <div class="panel panel-default">
-            <div class="panel-heading">@yield('section')</div>
+            <div class="panel-heading">
+                <h3 class="panel-title">@yield('section')</h3>
+            </div>
 
             @yield('content')
         </div>
