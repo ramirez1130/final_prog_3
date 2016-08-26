@@ -32,7 +32,8 @@
                         @endif
                     </td>
                     <td>
-                        <?= Form::open(['route' => ['user.index', $user->id], 'method' => "delete"]);?>
+                        {!! link_to_route('user.delete','',[$user->id],['class' =>  'btn btn-warning glyphicon glyphicon-pencil']) !!}
+                        <?= Form::open(['route' => ['user.delete', $user->id], 'method' => "delete" , 'class'   =>  'btn-delete']);?>
                             <button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
                         <?= Form::close();?>
                     </td>

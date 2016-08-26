@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>@yield('section') | Panel de Control</title>
 	<?= \Html::style('css/bootstrap.min.css') ?>
+    <?= \Html::style('css/style.css') ?>
 </head>
 <body class="container">
     @include('admin.template.nav')
@@ -13,6 +14,7 @@
                 <h3 class="panel-title">@yield('section')</h3>
             </div>
             <div class="panel-body">
+                @include('flash::message')
                 @yield('content')
             </div>
         </div>

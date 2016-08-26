@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
+use Laracasts\Flash\Flash;
 
 class UserController extends Controller
 {
@@ -40,8 +41,9 @@ class UserController extends Controller
 
         User::create($input);
 
-        return redirect()->route('user.index')
-            ->with('message', 'El usuario se creo exitosamente!');
+        Flash::success("El usuario se creo exitosamente!");
+
+        return redirect()->route('user.index');
     }
 
     public function edit($id){
@@ -53,7 +55,12 @@ class UserController extends Controller
     }
 
     public function delete($id){
-        dd("Eliminar el usuario que recibe por parametro: $id");
+
+        User::destroy($id);
+
+        Flash::error("El usuario se elimino exitosamente!");
+        return redirect()->route('user.index');
+
     }
     
 }
