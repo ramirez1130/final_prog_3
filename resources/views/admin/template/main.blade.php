@@ -12,8 +12,9 @@
             <div class="panel-heading">
                 <h3 class="panel-title">@yield('section')</h3>
             </div>
-
-            @yield('content')
+            <div class="panel-body">
+                @yield('content')
+            </div>
         </div>
 
     <?= \Html::script('js/jquery-3.1.0.min.js') ?>

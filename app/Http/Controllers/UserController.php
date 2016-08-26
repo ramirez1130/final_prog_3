@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Gender;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
@@ -12,14 +16,32 @@ class UserController extends Controller
 
         $users = User::orderBy('id','ASC')->paginate(7  );
         return view('admin.users.index')->with( 'users' , $users );
+
     }
 
     public function create(){
-        dd("Vista del formulario para crear un usuario");
+        $genders = Gender::all()->pluck('gender','id');
+        return view('admin.users.create')->with('genders' , $genders);
     }
 
     public function save(){
-        dd("Guardar el usuario creado");
+        $input = Input::all();
+        $password = Hash::make(Input::get('password'));
+        $input['password'] = $password;
+
+        $validator = Validator::make($input,User::$rules);
+
+        if($validator->fails()) {
+            return redirect()
+                ->route('user.create')
+                ->withInput()
+                ->withErrors($validator);
+        }
+
+        User::create($input);
+
+        return redirect()->route('user.index')
+            ->with('message', 'El usuario se creo exitosamente!');
     }
 
     public function edit($id){

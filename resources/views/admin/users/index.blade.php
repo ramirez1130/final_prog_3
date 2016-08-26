@@ -3,6 +3,7 @@
 @section('section','Lista de usuarios')
 
 @section('content')
+    <?= link_to_route('user.create', 'Registrar nuevo usuario', [], ['class' => 'btn btn-primary']); ?>
     <table class="table table-striped">
         <thead>
             <th>ID</th>
@@ -31,7 +32,7 @@
                         @endif
                     </td>
                     <td>
-                        <?= Form::open(['route' => ['userList', $user->id], 'method' => "delete"]);?>
+                        <?= Form::open(['route' => ['user.index', $user->id], 'method' => "delete"]);?>
                             <button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
                         <?= Form::close();?>
                     </td>
