@@ -3,6 +3,14 @@
 @section('section','Editar usuario ' . $user->name . ' ' . $user->lastname )
 
 @section('content')
+    @if($errors->any())
+        @foreach($errors->all() as $unError)
+            <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                {{$unError}}
+            </div>
+        @endforeach
+    @endif
 
     {!! Form::open(['route' =>  ['user.update',$user->id], 'method'  =>  'PUT']) !!}
 
