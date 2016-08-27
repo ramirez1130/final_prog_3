@@ -13,8 +13,8 @@ class User extends Model{
 	];
 
 	public static $rules = [
-        'name'      =>  'required',
-        'lastname'  =>  'required',
+        'name'      =>  'required|min:5',
+        'lastname'  =>  'required|min:5',
         'dni'       =>  'integer|between:10000000,90000000',
         'email'     =>  'required|email',
         'username'  =>  'required|alpha_num|min:8',

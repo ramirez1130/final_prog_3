@@ -3,6 +3,16 @@
 @section('section','Crear usuario')
 
 @section('content')
+
+    @if($errors->any())
+        @foreach($errors->all() as $unError)
+            <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                {{$unError}}
+            </div>
+        @endforeach
+    @endif
+
     {!! Form::open(['route' =>  'user.save', 'method'  =>  'POST']) !!}
 
         <div class="form-group col-lg-6">
