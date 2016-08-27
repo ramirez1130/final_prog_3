@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fca358e-1128-4b4f-a789-5738c4713380" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/User.php" afterPath="$PROJECT_DIR$/app/Models/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
     </list>
     <ignored path="final_prog_3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,11 +46,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/User.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
               <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/app.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-739">
+              <caret line="80" column="28" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -138,7 +146,6 @@
         <option value="$PROJECT_DIR$/database/seeds/GenderSeeder.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_08_04_221224_add_users_table.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/template/main.blade.php" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" />
@@ -148,6 +155,7 @@
         <option value="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/User.php" />
+        <option value="$PROJECT_DIR$/config/app.php" />
       </list>
     </option>
   </component>
@@ -340,6 +348,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="final_prog_3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="final_prog_3" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -350,7 +372,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Escritorio/noche-prog-3/clase-14" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
@@ -420,12 +442,12 @@
       <workItem from="1472074612441" duration="17287000" />
       <workItem from="1472249622459" duration="8741000" />
       <workItem from="1472296980884" duration="603000" />
-      <workItem from="1472325045459" duration="1218000" />
+      <workItem from="1472325045459" duration="1609000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98119000" />
+    <option name="totallyTimeSpent" value="98510000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="43" y="24" width="1323" height="744" extended-state="6" />
@@ -723,13 +745,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="216" column="48" selection-start-line="216" selection-start-column="48" selection-end-line="216" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laracasts/flash/src/Laracasts/Flash/FlashServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-322">
@@ -833,6 +848,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-739">
+          <caret line="80" column="28" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
           <folding />
         </state>
       </provider>
