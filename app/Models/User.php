@@ -16,7 +16,7 @@ class User extends Model{
         'name'      =>  'required|min:5',
         'lastname'  =>  'required|min:5',
         'dni'       =>  'integer|between:10000000,90000000',
-        'email'     =>  'required|email',
+        'email'     =>  'required|email|unique:users',
         'username'  =>  'required|alpha_num|min:8',
         'password'  =>  'required',
         'type'      =>  'required'

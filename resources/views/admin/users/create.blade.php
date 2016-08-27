@@ -5,12 +5,11 @@
 @section('content')
 
     @if($errors->any())
-        @foreach($errors->all() as $unError)
-            <div class="alert alert-danger">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                {{$unError}}
-            </div>
-        @endforeach
+        <div class="alert alert-danger">
+            @foreach($errors->all() as $error)
+                <li>{{$error}}</li>
+            @endforeach
+        </div>
     @endif
 
     {!! Form::open(['route' =>  'user.save', 'method'  =>  'POST']) !!}
