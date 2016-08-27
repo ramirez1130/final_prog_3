@@ -1,5 +1,15 @@
 <?php
 
+Route::get('/',[
+    'uses'  =>  'GuestController@index',
+    'as'    =>  'guest.index'
+]);
+
+Route::post('login',[
+    'uses'  =>  'GuestController@login',
+    'as'    =>  'guest.login'
+]);
+
 Route::group(['prefix'  =>  'users'], function(){
 
     Route::get('/',[
