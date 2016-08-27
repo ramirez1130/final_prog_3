@@ -47,11 +47,35 @@ class UserController extends Controller
     }
 
     public function edit($id){
-        dd("Formulario para editar un usuario. Con el id $id");
+        
+        $user = User::find($id);
+        $genders = Gender::all()->pluck('gender','id');
+        
+        return view('admin.users.edit',compact('user','genders'));
+        
     }
 
-    public function update(){
-        dd("Actualizar la informacion del usuario editado");
+    public function update($id){
+        $input = Input::all();
+        $password = Hash::make(Input::get('password'));
+        $input['password'] = $password;
+
+        $validator = Validator::make($input,User::$rules);
+
+        if($validator->fails()) {
+            return redirect()
+                ->route('user.edit',[$id])
+                ->withInput()
+                ->withErrors($validator);
+        }
+
+        $user = User::findOrFail($id);
+        $user->update($input);
+
+        Flash::success("El usuario se actualizo exitosamente!");
+
+        return redirect()->route('user.index');
+
     }
 
     public function delete($id){

@@ -21,7 +21,7 @@ $factory->define(User::class, function (Generator $faker) {
     return [
         'name'		=> $faker->firstName,
         'lastname'	=> $faker->lastname,
-        'dni'		=> $faker->bankAccountNumber,
+        'dni'		=> $faker->numberBetween(10000000,90000000),
         'email' 	=> $faker->email,
         'username'	=> $faker->username,
         'password' 	=> Hash::make('contraseña'),

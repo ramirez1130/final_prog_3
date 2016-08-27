@@ -12,6 +12,16 @@ Route::group(['prefix'  =>  'users'], function(){
         'as'    =>  'user.create'
     ]);
 
+    Route::get('{id}/edit',[
+        'uses'  =>  'UserController@edit',
+        'as'    =>  'user.edit'
+    ]);
+
+    Route::put('{id}/edit',[
+        'uses'  =>  'UserController@update',
+        'as'    =>  'user.update'
+    ]);
+
     Route::post('/create',[
         'uses'  =>  'UserController@save',
         'as'    =>  'user.save'
