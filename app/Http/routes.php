@@ -15,7 +15,7 @@ Route::get('logout',[
     'as'    =>  'guest.logout'
 ]);
 
-Route::group(['prefix'  =>  'users'], function(){
+Route::group(['prefix'=>'users','middleware'=>'auth'], function(){
 
     Route::get('/',[
         'uses'  =>  'UserController@index',

@@ -11,14 +11,14 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="#">Usuarios</a></li>
-                <li><a href="#">Equipos</a></li>
-                <li><a href="#">Torneos</a></li>
-                <li><a href="#">Canchas</a></li>
-                <li><a href="#">Partidos</a></li>
-            </ul>
             @if(Auth::check())
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Usuarios</a></li>
+                    <li><a href="#">Equipos</a></li>
+                    <li><a href="#">Torneos</a></li>
+                    <li><a href="#">Canchas</a></li>
+                    <li><a href="#">Partidos</a></li>
+                </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
