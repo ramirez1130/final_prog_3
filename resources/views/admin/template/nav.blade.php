@@ -13,8 +13,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             @if(Auth::check())
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Usuarios</a></li>
-                    <li><a href="#">Equipos</a></li>
+                    <li>{{ link_to_route('user.index','Usuarios')  }}</li>
+                    <li>{{ link_to_route('team.index','Equipos')  }}</li>
                     <li><a href="#">Torneos</a></li>
                     <li><a href="#">Canchas</a></li>
                     <li><a href="#">Partidos</a></li>
