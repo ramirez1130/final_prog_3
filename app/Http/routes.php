@@ -10,6 +10,11 @@ Route::post('login',[
     'as'    =>  'guest.login'
 ]);
 
+Route::get('logout',[
+    'uses'  =>  'GuestController@logout',
+    'as'    =>  'guest.logout'
+]);
+
 Route::group(['prefix'  =>  'users'], function(){
 
     Route::get('/',[

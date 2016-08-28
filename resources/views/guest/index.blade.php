@@ -10,7 +10,7 @@
         </div>
         <div class="form-group">
             {!! Form::label('password','Contraseña') !!}
-            {!! Form::password('password',null,['class' =>  'form-control','required']) !!}
+            {!! Form::password('password',['class' =>  'form-control','required']) !!}
         </div>
         <div class="form-group">
             {!! Form::submit('Entrar',['class'  =>  'btn btn-success col-lg-12']) !!}

@@ -18,8 +18,8 @@ class GuestController extends Controller
 
         $inputs = Input::except(['_token']);
 
-        if(Auth::attemp($inputs)){
-            return redirect()->route('admin.index');
+        if(Auth::attempt($inputs)){
+            return redirect()->route('user.index');
         }
 
         Flash::error('Usuario y/o password incorrectos.');
@@ -28,7 +28,8 @@ class GuestController extends Controller
     }
 
     public function logout(){
-
+        Auth::logout();
+        return redirect()->route('guest.index');
     }
 
 }
