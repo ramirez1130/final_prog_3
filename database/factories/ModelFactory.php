@@ -32,7 +32,8 @@ $factory->define(User::class, function (Generator $faker) {
 
 $factory->define(Team::class, function (Generator $faker) {
     return [
-        'name'		=> "Team " . $faker->state
+        'name'		    => "Team " . $faker->state,
+        'tournament_id' =>  $faker->randomElement([1,2,3,4,5,null])
     ];
 });
 

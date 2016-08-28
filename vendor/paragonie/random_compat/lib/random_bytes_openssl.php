@@ -29,7 +29,7 @@
 /**
  * Since openssl_random_pseudo_bytes() uses openssl's 
  * RAND_pseudo_bytes() API, which has been marked as deprecated by the
- * OpenSSL team, this is our last resort before failure.
+ * OpenSSL teams, this is our last resort before failure.
  * 
  * @ref https://www.openssl.org/docs/crypto/RAND_bytes.html
  * 

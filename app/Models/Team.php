@@ -8,7 +8,7 @@ class Team extends Model{
 
     protected $table = 'teams';
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name','tournament_id'];
 
     public $timestamps = false;
 
@@ -18,6 +18,10 @@ class Team extends Model{
 
     public function user(){
         return $this->belongsTo(User::class);
+    }
+
+    public function tournament(){
+        return $this->hasOne(Tournament::class,'id','tournament_id');
     }
 
 }

@@ -18,4 +18,8 @@ class Tournament extends Model{
 		return $this->hasOne(TypeTournament::class,'id','type_tournament_id');
 	}
 
+	public function teams(){
+		return $this->belongsTo(Team::class);
+	}
+
 }

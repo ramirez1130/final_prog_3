@@ -19,7 +19,8 @@ class TeamController extends Controller
     }
 
     public function create(){
-        return view('admin.teams.create');
+        //return view('admin.teams.create');
+        dd(2);
     }
 
     public function save(){
@@ -38,7 +39,7 @@ class TeamController extends Controller
 
         Flash::success("El equipo se creo exitosamente!");
 
-        return redirect()->route('team.index');
+        return redirect()->route('teams.index');
     }
 
     public function edit($id){
@@ -56,7 +57,7 @@ class TeamController extends Controller
 
         if($validator->fails()) {
             return redirect()
-                ->route('team.edit',[$id])
+                ->route('teams.edit',[$id])
                 ->withInput()
                 ->withErrors($validator);
         }
@@ -66,7 +67,7 @@ class TeamController extends Controller
 
         Flash::success("El equipo se actualizo exitosamente!");
 
-        return redirect()->route('team.index');
+        return redirect()->route('teams.index');
 
     }
 
@@ -75,7 +76,7 @@ class TeamController extends Controller
         Team::destroy($id);
 
         Flash::error("El equipo se elimino exitosamente!");
-        return redirect()->route('team.index');
+        return redirect()->route('teams.index');
 
     }
 
