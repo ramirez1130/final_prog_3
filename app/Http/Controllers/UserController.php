@@ -12,10 +12,9 @@ use Laracasts\Flash\Flash;
 
 class UserController extends Controller
 {
-
     public function index(){
 
-        $users = User::orderBy('id','ASC')->paginate(7  );
+        $users = User::orderBy('id','ASC')->paginate(7);
         return view('admin.users.index')->with( 'users' , $users );
 
     }

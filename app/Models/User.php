@@ -33,6 +33,17 @@ class User extends Authenticatable{
 	}
 
 	public function matches(){
-        return $this->belongsToMany(Match::class);
+        return $this->belongsToMany(Match::class,'user_match')->withPivot('score');
     }
+
+	public function calculateAverage(){
+		$scores = collect();
+
+		foreach($this->matches as $match){
+			$scores->push($match->pivot->score);
+		}
+
+		return number_format($scores->avg(),2);
+
+	}
 }

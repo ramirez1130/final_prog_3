@@ -23,7 +23,7 @@
                     <td> {{$user->email}} </td>
                     <td> {{$user->username}} </td>
                     <td> {{$user->type}} </td>
-                    <td> {{$user->average}} </td>
+                    <td> {{$user->calculateAverage()}} </td>
                     <td>
                         @if($user->type == 'player')
                             {{$user->team->name}}
