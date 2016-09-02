@@ -26,7 +26,7 @@ Route::group(['prefix'=>'users'],function(){
         'as'    =>  'user.save'
     ]);
 
-    Route::delete('{id}/delete',[
+    Route::delete('{id}',[
         'uses'  =>  'UserController@delete',
         'as'    =>  'user.delete'
     ]);
