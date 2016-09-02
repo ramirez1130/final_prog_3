@@ -12,14 +12,14 @@ class AddCourtsTable extends Migration
      */
     public function up()
     {
-        Schema::create('courts', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name',45);
-            $table->string('lat');
-            $table->string('long');
-            $table->integer('owner')->unsigned()->nullable();
+        Schema::create('COURTS', function (Blueprint $table) {
+            $table->increments('ID');
+            $table->string('NAME',45);
+            $table->string('LAT');
+            $table->string('LONG');
+            $table->integer('OWNER')->unsigned()->nullable();
             
-            $table->foreign('owner')->references('id')->on('users');
+            $table->foreign('OWNER')->references('ID')->on('USERS');
         });
     }
 
@@ -30,6 +30,6 @@ class AddCourtsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('courts');
+        Schema::drop('COURTS');
     }
 }

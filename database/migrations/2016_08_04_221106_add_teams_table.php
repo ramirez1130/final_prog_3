@@ -12,12 +12,12 @@ class AddTeamsTable extends Migration
      */
     public function up()
     {
-        Schema::create('teams', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name',50);
-            $table->integer('tournament_id')->unsigned()->nullable();
+        Schema::create('TEAMS', function (Blueprint $table) {
+            $table->increments('ID');
+            $table->string('NAME',50);
+            $table->integer('TOURNAMENT_ID')->unsigned()->nullable();
 
-            $table->foreign('tournament_id')->references('id')->on('tournaments');
+            $table->foreign('TOURNAMENT_ID')->references('ID')->on('TOURNAMENTS');
         });
     }
 
@@ -28,6 +28,6 @@ class AddTeamsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('teams');
+        Schema::drop('TEAMS');
     }
 }

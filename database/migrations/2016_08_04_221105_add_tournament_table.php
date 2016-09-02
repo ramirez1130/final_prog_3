@@ -12,17 +12,17 @@ class AddTournamentTable extends Migration
      */
     public function up()
     {
-        Schema::create('tournaments', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name',100);
-            $table->smallInteger('price');
-            $table->decimal('reward',9,4);
-            $table->tinyInteger('quota');
-            $table->integer('type_tournament_id')->unsigned();
-            $table->integer('commission')->unsigned();
+        Schema::create('TOURNAMENTS', function (Blueprint $table) {
+            $table->increments('ID');
+            $table->string('NAME',100);
+            $table->smallInteger('PRICE');
+            $table->decimal('REWARD',9,4);
+            $table->tinyInteger('QUOTA');
+            $table->integer('TYPE_TOURNAMENT_ID')->unsigned();
+            $table->integer('COMMISSION')->unsigned();
 
-            $table->foreign('type_tournament_id')->references('id')->on('types_tournaments');
-            $table->foreign('commission')->references('id')->on('commissions');
+            $table->foreign('TYPE_TOURNAMENT_ID')->references('ID')->on('TYPES_TOURNAMENTS');
+            $table->foreign('COMMISSION')->references('ID')->on('COMMISSIONS');
             $table->timestamps();
         });
     }
@@ -34,6 +34,6 @@ class AddTournamentTable extends Migration
      */
     public function down()
     {
-        Schema::drop('tournaments');
+        Schema::drop('TOURNAMENTS');
     }
 }

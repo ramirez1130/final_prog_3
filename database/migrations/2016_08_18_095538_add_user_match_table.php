@@ -12,14 +12,14 @@ class AddUserMatchTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_match', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('user_id')->unsigned();
-            $table->integer('match_id')->unsigned();
-            $table->decimal('score',4,2);
+        Schema::create('USER_MATCH', function (Blueprint $table) {
+            $table->increments('ID');
+            $table->integer('USER_ID')->unsigned();
+            $table->integer('MATCH_ID')->unsigned();
+            $table->decimal('SCORE',4,2);
             
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('match_id')->references('id')->on('matches');
+            $table->foreign('USER_ID')->references('ID')->on('USERS');
+            $table->foreign('MATCH_ID')->references('ID')->on('MATCHES');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class AddUserMatchTable extends Migration
      */
     public function down()
     {
-        Schema::drop('user_match');
+        Schema::drop('USER_MATCH');
     }
 }

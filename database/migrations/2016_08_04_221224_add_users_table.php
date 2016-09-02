@@ -12,22 +12,22 @@ class AddUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name',30);
-            $table->string('lastname',30);
-            $table->integer('dni');
-            $table->string('email',80);
-            $table->double('average', 4, 2);
-            $table->string('username',30);
-            $table->string('password',60);
-            $table->integer('team_id')->unsigned()->nullable();
-            $table->integer('gender_id')->unsigned();
+        Schema::create('USERS', function (Blueprint $table) {
+            $table->increments('ID');
+            $table->string('NAME',30);
+            $table->string('LASTNAME',30);
+            $table->integer('DNI');
+            $table->string('EMAIL',80);
+            $table->double('AVERAGE', 4, 2);
+            $table->string('USERNAME',30);
+            $table->string('PASSWORD',60);
+            $table->integer('TEAM_ID')->unsigned()->nullable();
+            $table->integer('GENDER_ID')->unsigned();
 
-            $table->foreign('team_id')->references('id')->on('teams');
-            $table->foreign('gender_id')->references('id')->on('genders');
+            $table->foreign('TEAM_ID')->references('ID')->on('TEAMS');
+            $table->foreign('GENDER_ID')->references('ID')->on('GENDERS');
 
-            $table->enum('type',['player','owner-court','admin'])->default('player');
+            $table->enum('TYPE',['player','owner-court','admin'])->default('player');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -40,6 +40,6 @@ class AddUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('users');
+        Schema::drop('USERS');
     }
 }

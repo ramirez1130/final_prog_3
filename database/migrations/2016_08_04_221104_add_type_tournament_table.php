@@ -12,9 +12,9 @@ class AddTypeTournamentTable extends Migration
      */
     public function up()
     {
-        Schema::create('types_tournaments', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name',45);
+        Schema::create('TYPES_TOURNAMENTS', function (Blueprint $table) {
+            $table->increments('ID');
+            $table->string('NAME',45);
         });
     }
 
@@ -25,6 +25,6 @@ class AddTypeTournamentTable extends Migration
      */
     public function down()
     {
-        Schema::drop('types_tournaments');
+        Schema::drop('TYPES_TOURNAMENTS');
     }
 }

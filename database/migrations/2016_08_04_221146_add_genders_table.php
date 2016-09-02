@@ -12,9 +12,9 @@ class AddGendersTable extends Migration
      */
     public function up()
     {
-        Schema::create('genders', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('gender',9);
+        Schema::create('GENDERS', function (Blueprint $table) {
+            $table->increments('ID');
+            $table->string('GENDER',9);
         });
     }
 
@@ -25,6 +25,6 @@ class AddGendersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('genders');
+        Schema::drop('GENDERS');
     }
 }

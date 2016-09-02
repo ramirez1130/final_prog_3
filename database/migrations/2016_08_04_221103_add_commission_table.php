@@ -12,10 +12,10 @@ class AddCommissionTable extends Migration
      */
     public function up()
     {
-        Schema::create('commissions', function (Blueprint $table) {
-            $table->increments('id');
-            $table->double('commission');
-            $table->decimal('amount',8,4);
+        Schema::create('COMMISSIONS', function (Blueprint $table) {
+            $table->increments('ID');
+            $table->double('COMMISSION');
+            $table->decimal('AMOUNT',8,4);
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class AddCommissionTable extends Migration
      */
     public function down()
     {
-        Schema::drop('commissions');
+        Schema::drop('COMMISSIONS');
     }
 }
