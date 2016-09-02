@@ -7,9 +7,18 @@ use App\Models\User;
 class UserService
 {
 
-	public function find($id){
+	public function refreshAndGetAverage($id){
+		$scores = collect();
 		$user = User::find($id);
-		return $user;
+
+		foreach( $user->matches as $match ){
+			$scores->push($match->pivot->score);
+		}
+
+		$user->average = $scores->avg();
+		$user->save();
+
+		return number_format($scores->avg(),2);
 	}
 
 }
