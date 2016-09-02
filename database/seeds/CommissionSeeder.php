@@ -11,9 +11,9 @@ class CommissionSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('commissions')->insert([
-            'commission'    =>  0.2,
-            'amount'        =>  5000.0000
+        DB::table('COMMISSIONS')->insert([
+            'COMMISSION'    =>  0.2,
+            'AMOUNT'        =>  5000.0000
         ]);
     }
 }

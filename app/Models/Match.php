@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Match extends Model{
 
-	protected $table = 'matches';
+	protected $table = 'MATCHES';
 
-	protected $fillable = ['local','visitor','date','court_id','tournament_id'];
+	protected $fillable = ['LOCAL','VISITOR','DATE','COURT_ID','TOURNAMENT_ID'];
 
 	public function court(){
 		return $this->hasOne(Court::class,'id');

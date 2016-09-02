@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tournament extends Model{
 
-	protected $table = 'tournaments';
+	protected $table = 'TOURNAMENTS';
 
-	protected $fillable = ['name','price','type_tournament_id','reward','quota'];
+	protected $fillable = ['NAME','PRICE','TYPE_TOURNAMENT_ID','REWARD','QUOTA'];
 
 	public function matches(){
 		$this->hasMany(Match::class);

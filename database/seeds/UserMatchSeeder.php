@@ -11,22 +11,22 @@ class UserMatchSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('user_match')->insert([
-            'user_id'   =>  2,
-            'match_id'  =>  1,
-            'score'     =>  7
+        DB::table('USER_MATCH')->insert([
+            'USER_ID'   =>  2,
+            'MATCH_ID'  =>  1,
+            'SCORE'     =>  7
         ]);
 
-        DB::table('user_match')->insert([
-            'user_id'   =>  2,
-            'match_id'  =>  2,
-            'score'     =>  5
+        DB::table('USER_MATCH')->insert([
+            'USER_ID'   =>  2,
+            'MATCH_ID'  =>  2,
+            'SCORE'     =>  5
         ]);
 
-        DB::table('user_match')->insert([
-            'user_id'   =>  2,
-            'match_id'  =>  3,
-            'score'     =>  2
+        DB::table('USER_MATCH')->insert([
+            'USER_ID'   =>  2,
+            'MATCH_ID'  =>  3,
+            'SCORE'     =>  2
         ]);
     }
 }

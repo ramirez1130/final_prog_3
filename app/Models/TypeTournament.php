@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class TypeTournament extends Model{
 
-	protected $table = 'types_tournaments';
+	protected $table = 'TYPES_TOURNAMENTS';
 
-	protected $fillable = ['type'];
+	protected $fillable = ['TYPE'];
 
 }

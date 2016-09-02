@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Court extends Model{
 
-	protected $table = 'courts';
+	protected $table = 'COURTS';
 
-	protected $fillable = ['name','lat','long','owner'];
+	protected $fillable = ['NAME','LAT','LONG','OWNER'];
 
 	public $timestamps = false;
 

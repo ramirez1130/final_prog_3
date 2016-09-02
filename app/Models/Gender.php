@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Gender extends Model{
 
-	protected $table = 'genders';
+	protected $table = 'GENDERS';
 
-	protected $fillable = ['gender'];
+	protected $fillable = ['GENDER'];
 
 	public function users(){
         return $this->belongsTo(User::class);

@@ -12,16 +12,16 @@ class TypeTournamentSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('types_tournaments')->insert([
-            'name'          =>  'league'
+        DB::table('TYPES_TOURNAMENTS')->insert([
+            'NAME'          =>  'league'
         ]);
 
-        DB::table('types_tournaments')->insert([
-            'name'          =>  'liguilla'
+        DB::table('TYPES_TOURNAMENTS')->insert([
+            'NAME'          =>  'liguilla'
         ]);
 
-        DB::table('types_tournaments')->insert([
-            'name'          =>  'elimination'
+        DB::table('TYPES_TOURNAMENTS')->insert([
+            'NAME'          =>  'elimination'
         ]);
     }
 }
